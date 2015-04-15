@@ -1,6 +1,6 @@
 {
     "name": "creolife-restapi-contacts",
-    "version": "1.0.2",
+    "version": "1.0.3",
     "description": "An simple RESTful API to manage contacts",
     "author": "Miroslaw Ratman <mirek.ratman@gmail.com>",
     "license": "MIT",

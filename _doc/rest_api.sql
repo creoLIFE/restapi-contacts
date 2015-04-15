@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost:3306
--- Generation Time: Apr 15, 2015 at 10:50 PM
+-- Generation Time: Apr 16, 2015 at 12:52 AM
 -- Server version: 5.5.34
 -- PHP Version: 5.4.26
 
@@ -32,14 +32,14 @@ CREATE TABLE `tokens` (
   `api_users_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_api_tokens_api_users_idx` (`api_users_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=15 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=17 ;
 
 --
 -- Dumping data for table `tokens`
 --
 
 INSERT INTO `tokens` (`id`, `token`, `api_users_id`) VALUES
-(14, 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MjgsImVtYWlsIjoibWlyZWtAcmF0bWFuLnBsIiwicmFuZG9tIjo4NDUzMjU0MzkwMDQuMjI3NX0.tMipKWwXa5yH6-KGiEl99s87n3IpdCMsgnXTremqXzA', 28);
+(16, 'eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6MzAsImVtYWlsIjoibWlyZWtAcmF0bWFuLnBsIiwicmFuZG9tIjo2MzYxMDM4MjA5ODcuMDQ1OH0.zTzlMF-kWP7R4eHuApinN4RQ6yGUoHSoWbdciWkUEAU', 30);
 
 -- --------------------------------------------------------
 
@@ -52,14 +52,14 @@ CREATE TABLE `users` (
   `email` varchar(45) NOT NULL,
   `password` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=29 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=31 ;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `email`, `password`) VALUES
-(28, 'some.email@gmail.com', '12345');
+(30, 'some.email@gmail.com', '12345');
 
 --
 -- Constraints for dumped tables

@@ -18,5 +18,5 @@ Installation
     [node app.js]
 10. Try to use example Postman https://chrome.google.com/webstore/detail/postman-rest-client/fdmmgilgnpjigdojojpjoooidkmcomcm?hl=en to do some queries to API
     [example GET http://localhost:8080/access_token/some.email@gmail.com/12345
-11. Run basic unit test
+11. Run basic unit test. Before run please update access_token.
     [example ./your_folder_with_project/node_modules/.bin/falkor test/test.js]
