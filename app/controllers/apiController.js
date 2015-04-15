@@ -4,7 +4,6 @@
 
 var config = require('../config/config');
 var express = require('express');
-var responseHelper = require('../helpers/response');
 var _ = require('lodash');
 var bodyParser = require('body-parser');
 var fs = require('fs');
@@ -136,7 +135,7 @@ module.exports = {
             });
         }
         catch (e) {
-            return res.status(500).send({type: "InternalServerError", message: "Error occured durring contact adding."});
+            return res.status(500).send({type: "InternalServerError", message: "Error occured durring photo adding."});
         }
     }
 }
