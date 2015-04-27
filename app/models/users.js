@@ -16,18 +16,21 @@ module.exports = function (orm, db) {
         {
             hooks: {
                 beforeCreate: function (next) {
+                    if( this.password === '' ){
+                        return new Error('NoPasswordSpecified')
+                    }
                     Users.exists({email: this.email}, function (err, exists) {
-                        return exists ? next(new Error("Email already exists")) : next();
+                        return exists ? next(new Error("EmailExists")) : next();
                     })
                 }
             },
             validations: {
                 email: [
-                    orm.enforce.patterns.email("Not valid email")
+                    orm.enforce.patterns.email("NotValidEmail")
                     // kind of alternative for checking if user exists - orm.enforce.unique("Already exists")
                 ],
                 password: [
-                    orm.enforce.notEmptyString("Not empty string"),
+                    orm.enforce.notEmptyString("NotEmptyString")
                 ]
             },
             methods: {

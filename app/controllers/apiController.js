@@ -39,7 +39,8 @@ module.exports = {
 
             //Create user
             req.models.users.create(usersParams, function (err, userResponse) {
-                if (err) return res.status(409).send({type: "EmailExists", message: "Specified e-mail address is already registered."});
+                if (err && typeof err[0] !== 'undefined' && err[0].property == 'password' && err[0].msg == 'NotEmptyString') return res.status(409).send({type: "NoPasswordSpecified", message: "No Password specified."});
+                if (err && err.message === 'EmailExists') return res.status(409).send({type: "EmailExists", message: "Specified e-mail address is already registered."});
 
                 //set access token
                 var payload = {
